@@ -43,7 +43,7 @@ export default function Home() {
     if (data.users.pageInfo.hasNextPage) {
       fetchMore({
         variables: { after: data.users.pageInfo.endCursor },
-        updateQuery: (previousResult, { fetchMoreResult }) => {
+          updateQuery: (previousResult, {fetchMoreResult}) => {
           if (!fetchMoreResult) return previousResult;
 
           return {
